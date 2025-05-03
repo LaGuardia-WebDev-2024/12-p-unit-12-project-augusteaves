@@ -1,18 +1,19 @@
 <!-- Unit 12 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ yes ] $() Select by Element, ID AND Class 
+[ yes ] Use Three Different jQuery Methods 
+[ yes ] Add Five CSS Declarations
+[ yes ] Include Three Images
 
 Select ONE Additional 
 [ no ] Feature 1 - Use .addClass() method
 [ no ] Feature 2 - Use a variable in javaScript 
 [ no ] Feature 3 - Use .mouseover() method
-[ no ] Feature 4 - Use .show() method
+[ yes ] Feature 4 - Use .show() method
 [ no ] Feature 5 - Use .append() method
 -->
 
+<!DOCTYPE html>
 
 <!DOCTYPE html>
 <html>
@@ -25,36 +26,69 @@ Select ONE Additional
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <h1>My Top 3 <span>Travel Experiences</span></h1>
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <h3 id="mem1">London</h3>
+        <p id="england">More about this memory.</p>
+        <img
+          src="https://www.studying-in-uk.org/wp-content/uploads/2019/05/study-in-london.jpg"
+          width="150"
+          id="bigben"
+          style="display: none"
+        />
       </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="mem2">Iceland</h3>
+        <p id="mountain">More about this memory.</p>
+        <img
+          src="https://cdn.britannica.com/06/171306-050-C88DD752/Aurora-borealis-peninsula-Snaefellsnes-Iceland-March-2013.jpg"
+          width="150"
+          class="glacier"
+          style="display: none"
+        />
       </li>
+    </ol>
 
+    <ol>
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <h3 id="mem3">Paris</h3>
+        <p id="eiffel">More about this memory.</p>
+        <img
+          src="https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_4:3,w_3840,g_auto/f_auto/q_auto/v1/shutterstock_2118458942_ss_non-editorial_jnjpwq?_a=BAVAZGDX0"
+          width="150"
+          class="europe"
+          style="display: none"
+        />
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+        $("#mem1").css("color", "rgb(73, 132, 241)");
+        $("#england").text(
+          "The architecture, the people, I never wanted to leave. February, 2023"
+        );
+        $("#bigben").show(2000);
+        $("body").css("background-color", "rgb(241, 229, 73)");
       });
 
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+        $("#mem2").css("color", "rgb(73, 132, 241)");
+        $("#mountain").text(
+          "The most beautiful country I have ever seen. The sun never goes down. All the waterfalls and mountains."
+        );
+        $(".glacier").show(2000);
+        $("body").css("background-color", "rgb(149, 250, 236)");
       });
 
       $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
+        $("#mem3").css("color", "rgb(204, 204, 255)");
+        $("#eiffel").text("Unpopular opinion: i love the French people");
+        $(".europe").show(2000);
+        $("body").css("background-color", "rgb(222, 49, 99)");
       });
     </script>
   </body>
